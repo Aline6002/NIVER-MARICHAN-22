@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (distance < 0) {
             clearInterval(interval);
-            document.getElementById("timer").innerHTML = "🎉 É hoje! Feliz Aniversário Mari e Chan! 🎉";
+            document.getElementById("timer").innerHTML = "🎉 É hoje! Feliz Aniversário Mari-Chan! 🎉";
         } else {
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
