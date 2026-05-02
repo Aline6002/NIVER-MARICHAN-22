@@ -1,13 +1,16 @@
 :root {
-    --primary-color: #d81b60;
-    --secondary-color: #880e4f;
-    --bg-gradient: linear-gradient(135deg, #fff1f4 0%, #ffeaf1 50%, #ffd9e5 100%);
-    --card-bg: rgba(255, 255, 255, 0.9);
-    --text-color: #374151;
-    --accent-color: #ad1457;
-    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
-    --shadow-lg: 0 20px 25px -5px rgba(216, 27, 96, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --primary-color: #f472b6;
+    --secondary-color: #c084fc;
+    --bg-gradient: linear-gradient(135deg, #0a0511 0%, #15062a 50%, #200438 100%);
+    --card-bg: rgba(32, 6, 58, 0.75);
+    --text-color: #ede9fe;
+    --accent-color: #ec4899;
+    
+    /* Sombras suaves e elegantes */
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(168, 85, 247, 0.1);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(168, 85, 247, 0.2);
+    --shadow-lg: 0 20px 25px -5px rgba(244, 114, 182, 0.2), 0 10px 10px -5px rgba(139, 92, 246, 0.2);
+    
     --radius-md: 16px;
     --radius-lg: 24px;
 }
@@ -19,14 +22,15 @@
 }
 
 body {
+    /* Fonte limpa para o corpo do texto */
     font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
     background: var(--bg-gradient);
     color: var(--text-color);
-    padding: 48px 20px 16px 20px; /* Adiciona espaçamento na parte inferior */
+    padding: 48px 20px 16px 20px;
     text-align: center;
     min-height: 100vh;
-    display: flex;             /* Transforma o body em container flexível */
-    flex-direction: column;    /* Alinha os elementos em coluna */
+    display: flex;
+    flex-direction: column;
 }
 
 header.hero {
@@ -34,12 +38,17 @@ header.hero {
 }
 
 header h1 {
+    /* Fonte especial aplicada aos títulos maiores */
+    font-family: 'Times New Roman', Times, serif;
     color: var(--primary-color);
     margin-bottom: 12px;
     font-size: 2.75rem;
     font-weight: 700;
     letter-spacing: -0.025em;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(90deg, #fbcfe8, #f472b6, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 section {
@@ -47,11 +56,14 @@ section {
 }
 
 h2 {
+    /* Fonte especial aplicada aos subtítulos */
+    font-family: 'Times New Roman', Times, serif;
     color: var(--secondary-color);
     margin-bottom: 24px;
     font-size: 1.85rem;
     font-weight: 600;
     letter-spacing: -0.015em;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .countdown {
@@ -62,7 +74,7 @@ h2 {
     padding: 36px;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-md);
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(244, 114, 182, 0.3);
 }
 
 #timer {
@@ -85,32 +97,55 @@ h2 {
     height: 240px;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: var(--shadow-sm);
+    border: 2px solid rgba(244, 114, 182, 0.3);
+    box-shadow: 0 6px 18px rgba(168, 85, 247, 0.4);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
 }
 
 .photo-grid img:hover {
     transform: translateY(-6px) scale(1.02);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 20px 40px rgba(232, 121, 249, 0.5);
+    border-color: var(--accent-color);
+}
+
+/* Seção de Vídeos */
+.videos {
+    padding: 32px 16px;
+    text-align: center;
+}
+
+.videos h2 {
+    /* Mantém a fonte especial no título */
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 24px;
+    font-size: 2rem;
+    color: var(--accent-color);
 }
 
 .video-grid {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 28px;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 
+/* Estilização dos vídeos em formato vertical (em pé) */
 .video-grid video {
-    width: 320px;
-    height: 180px;
-    border-radius: 12px;
-    box-shadow: var(--shadow-sm);
-    transition: box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 260px;
+    height: 460px;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(244, 114, 182, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .video-grid video:hover {
-    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(244, 114, 182, 0.5);
+    border-color: #f472b6;
 }
 
 /* Seção da Torre */
@@ -123,7 +158,7 @@ h2 {
     padding: 32px;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-md);
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(244, 114, 182, 0.3);
     transition: box-shadow 0.3s ease;
 }
 
@@ -147,13 +182,15 @@ h2 {
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
-    box-shadow: var(--shadow-sm);
+    border: 2px solid rgba(244, 114, 182, 0.4);
+    box-shadow: 0 6px 16px rgba(168, 85, 247, 0.4);
 }
 
 /* Efeito ao passar o mouse */
 .tower-wrapper img:hover {
     transform: translateY(-4px) scale(1.04);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 16px 32px rgba(232, 121, 249, 0.5);
+    border-color: #f472b6;
 }
 
 /* Texto de dica de clique */
@@ -166,13 +203,13 @@ h2 {
     line-height: 1.4;
 }
 
-/* Rodapé Super Compacto */
+/* Rodapé */
 .site-footer {
     text-align: center;
-    margin-top: auto; /* Pressiona o rodapé para o final da página */
+    margin-top: auto;
     padding: 6px 0;
-    border-top: 1px solid rgba(216, 27, 96, 0.2);
-    color: var(--primary-color, #d81b60);
+    border-top: 1px solid rgba(244, 114, 182, 0.2);
+    color: var(--primary-color);
     font-size: 0.75rem;
     line-height: 1.1;
 }
@@ -182,6 +219,7 @@ h2 {
     font-style: italic;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
     body {
         padding: 24px 12px;
@@ -216,28 +254,28 @@ h2 {
     }
 
     .video-grid {
-        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
     }
 
     .video-grid video {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
+        max-width: 80%;
+        height: 360px;
     }
 
-    /* Ajuste da seção da torre para telas pequenas */
     .tower-section {
         padding: 20px;
         margin: 28px auto;
     }
 
     .tower-wrapper {
-        flex-direction: column; /* Coloca a imagem em cima e o texto embaixo */
+        flex-direction: column;
         gap: 20px;
     }
 
     .tower-wrapper img {
-        max-width: 100px; /* Torre menor para mobile */
+        max-width: 100px;
     }
 
     .tower-wrapper .click-hint {
