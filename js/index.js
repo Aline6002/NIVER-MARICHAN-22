@@ -1,13 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Mensagem de aniversário com a história e seus sentimentos
-    const messageText = `Somos duas amigas que se conheceram em fevereiro de 2022, na Etec Comendador João Rays, durante o curso técnico em Logística. Mesmo que hoje a gente não converse tanto por causa das dificuldades da vida e dos momentos que cada uma está vivendo, quero que você saiba que, para mim, a nossa amizade continua firme, forte e muito especial. 💖
-
-Parabéns pelos seus 22 anos! Que esse novo ciclo seja cheio de amor, paz, saúde e muitas conquistas. Você merece tudo de mais lindo que a vida pode oferecer. ✨
-
-Espero que a gente ainda possa comemorar muitos aniversários juntas. Te desejo toda a felicidade do mundo! 💕`;
-
-    document.getElementById("message-text").textContent = messageText;
-
     // Contagem regressiva até o dia 3 de maio de 2026
     const targetDate = new Date("May 3, 2026 00:00:00").getTime();
 
