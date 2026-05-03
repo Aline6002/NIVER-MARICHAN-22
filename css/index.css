@@ -34,14 +34,14 @@ body {
 }
 
 header.hero {
-    margin-bottom: 48px;
+    margin-bottom: 42px;
 }
 
 header h1 {
     /* Fonte especial aplicada aos títulos maiores */
     font-family: 'Times New Roman', Times, serif;
     color: var(--primary-color);
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     font-size: 2.75rem;
     font-weight: 700;
     letter-spacing: -0.025em;
@@ -52,14 +52,14 @@ header h1 {
 }
 
 section {
-    margin-bottom: 48px;
+    margin-bottom: 42px;
 }
 
 h2 {
     /* Fonte especial aplicada aos subtítulos */
     font-family: 'Times New Roman', Times, serif;
     color: var(--secondary-color);
-    margin-bottom: 24px;
+    margin-bottom: 22px;
     font-size: 1.85rem;
     font-weight: 600;
     letter-spacing: -0.015em;
@@ -70,8 +70,8 @@ h2 {
     background-color: var(--card-bg);
     backdrop-filter: blur(8px);
     max-width: 650px;
-    margin: 0 auto;
-    padding: 36px;
+    margin: 0 auto 56px auto; /* Adicionado um espaçamento maior embaixo */
+    padding: 32px;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-md);
     border: 1px solid rgba(244, 114, 182, 0.3);
